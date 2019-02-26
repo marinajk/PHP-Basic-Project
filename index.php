@@ -3,10 +3,7 @@ require("db.php");
 session_start();
 
 
-if(mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL".mysqli_connect();
-}
+
 
 if(isset($_POST['submit'])){
     $first=$_POST['firstname'];
@@ -17,10 +14,10 @@ if(isset($_POST['submit'])){
     $cpass=$_POST['cpassword'];
 
     $_SESSION['firstname'] = $first;
-$_SESSION['lastname'] = $last;
-$_SESSION['mobilenumber'] = $mobile;
-$_SESSION['emailid'] = $email;
-$_SESSION['password'] = $pass;
+    $_SESSION['lastname'] = $last;
+    $_SESSION['mobilenumber'] = $mobile;
+    $_SESSION['emailid'] = $email;
+    $_SESSION['password'] = $pass;
 }
 $msg='';
 

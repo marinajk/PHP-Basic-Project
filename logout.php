@@ -1,5 +1,8 @@
-if(isset($_POST['submit'])){
-    if(session_destroy()) {
-    header("Location: login.php");
- }
+<?php
+if(isset($_POST['submit']))
+{
+    session_unset();
+    session_destroy();
+    header("Location: ../login.php");
 }
+?>

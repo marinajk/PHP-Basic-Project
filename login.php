@@ -6,7 +6,8 @@ if(isset($_POST['submit'])){
     
     $email=$_POST['emailid'];
     $pass=$_POST['password'];
-
+    $_SESSION['emailid'] = $email;
+    $_SESSION['password'] = $pass;
 }
 $msg='';
 if(filter_has_var(INPUT_POST,'submit'))
@@ -55,10 +56,11 @@ if(filter_has_var(INPUT_POST,'submit'))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style1.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css">
 
 </head>
 <body>
+    
 <a href="index.php"><input type="button" class=" sub login" value="Register"></a>
 <?php if($msg!=''): ?>
 <div class="alert"> <?php echo $msg;?> </div><?php endif; ?>
