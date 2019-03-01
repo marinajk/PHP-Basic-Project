@@ -2,36 +2,70 @@
 require("db.php");
 session_start();
 
+
 if(isset($_POST['submit'])){
     
     $email=$_POST['emailid'];
     $pass=$_POST['password'];
     $_SESSION['emailid'] = $email;
     $_SESSION['password'] = $pass;
+
 }
 $msg='';
 if(filter_has_var(INPUT_POST,'submit'))
 {
     $email=$_POST['emailid'];
     $pass=$_POST['password'];
-  
+   
 
     if(!empty($email) && !empty($pass) )
     {
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)=== false)
+         if(filter_var($email, FILTER_VALIDATE_EMAIL)=== false)
         {
             $msg="Please use a valid E-mail ID";
         }
         
         else 
         {
-        $query="select * from Registration where eid='$email' and pwd='$pass'";
+            
+        $query="select * from Registration where id='$email' and pwd='$pass'";
         $result=mysqli_query($conn, $query);
+        
         $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             if($count==1)
             {
-                $msg="Login Successful";
-                header("location:home.php");
+              
+
+               $filled=$row['filled'];
+
+               $_SESSION['filled'] = $filled;
+               if($filled==NULL)
+                {
+                        header("Location:details.php");
+                }   
+                else
+                {
+                    $_SESSION['usertype']=$row['ut'];
+                    $utype=$_SESSION['usertype'];
+                    
+                    if($utype=="Admin")
+                    {
+                    
+                    header("Location:ahome.php");
+                
+                    }
+                    else if($utype=="Manager")
+                    {
+                
+                        header("Location:mhome.php");
+                    }
+                    else if($utype=="Employee")
+                    {
+                        
+                        header("Location:ehome.php");
+                    }
+                }   
             }
             else
             {
@@ -39,7 +73,7 @@ if(filter_has_var(INPUT_POST,'submit'))
         
             }
         }
-}
+    }
     else
     {
         $msg="Please fill in all the fields";
@@ -61,7 +95,7 @@ if(filter_has_var(INPUT_POST,'submit'))
 </head>
 <body>
     
-<a href="index.php"><input type="button" class=" sub login" value="Register"></a>
+
 <?php if($msg!=''): ?>
 <div class="alert"> <?php echo $msg;?> </div><?php endif; ?>
 <div class="midbox">

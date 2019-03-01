@@ -36,10 +36,14 @@ h1{
     border:1px solid #ad4040;
     border-radius: 5px;
     height: 25px;
-    width:70px;
+    width:90px;
     font-family: cursive;
-    padding-left: 10px;
+    padding-left: 5px;
 }
-
+.addd{
+    position: absolute;
+    top:20px;
+    left:1100px;
+}
 
 
