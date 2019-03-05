@@ -33,7 +33,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 <body>
 <a href="login.php"><input type="submit" name="submit" class="sub login " value="Logout" >
 <a href="myemp.php"><input type="submit" name="submit" class="sub myemp " value="My Employees" ></a>
-
+<a href="myacc.php"><input type="button" name="myaccount" value="My Account" class="sub mmyacc"></a>
 </a>
 <div class="midbox">
    <h1>

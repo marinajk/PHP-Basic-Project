@@ -36,6 +36,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 <a href="emp.php"><input type="button" name="emp" class="sub emp" value="Employees" ></a>
 <a href="man.php"><input type="button" name="man" class="sub man" value="Managers" ></a>
 <a href="adduser.php"><input type="button" name="adduser" value="Add User" class="sub addd"></a>
+<a href="myacc.php"><input type="button" name="myaccount" value="My Account" class="sub amyacc"></a>
 <div class="midbox">
    <h1>
     Hi <?php echo $_SESSION['firstname'].' '.$_SESSION['lastname']?>

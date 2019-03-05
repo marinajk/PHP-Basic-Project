@@ -1,6 +1,7 @@
 <?php
 require("db.php");
 session_start();
+$email=$_SESSION['emailid'];
 $msg='';
 if(isset($_POST['update']))
 {
@@ -43,14 +44,14 @@ $msg="Not updated";
     <br>
     <br>
 <?php
-$query="select uid,fn,ln,mobno,id from registration where ut='Manager'";
+
+$query="select uid,fn,ln,mobno,id from registration where id='$email'";
 $result=mysqli_query($conn, $query);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-if($count > 0)
+if($count==1)
 {
-while($row=mysqli_fetch_array($result))
-{
+
 echo "<form action=myacc.php method=post>";
 
 
@@ -62,11 +63,7 @@ echo "<input type=hidden name=hidden value=".$row['uid']."><br>";
 echo "<input type=submit class=sub name=update value=Update><br>";
 
 echo "</form>";
-}
-}
-
-
-?>
+}?>
 </div>
 </body>
 </html>
