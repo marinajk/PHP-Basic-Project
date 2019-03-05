@@ -49,7 +49,7 @@ $mid=$_SESSION['mid'];
 </head>
 <body>
 <a href="login.php"><input type="submit" name="submit" class="sub login " value="Logout" >
-
+<a href="myacc.php"><input type="button" name="myaccount" value="My Account" class="sub myacc"></a>
 
 </a>
 <div class="midbox">

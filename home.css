@@ -9,7 +9,16 @@ html{
     top:20px;
     left:1250px;
 }
-
+.tb
+{
+    border:1px solid #ad4040;
+    border-radius: 5px;
+    height: 25px;
+    width:200px;
+    color:#ad4040;
+    font-family: cursive;
+    padding-left: 10px;
+}
 a{
     text-decoration: none;
 }
@@ -22,6 +31,18 @@ a{
     padding: 0px 10px 10px 10px;
     margin-top: 100px;
     margin-left: 480px;
+    position: absolute;
+    font-family: cursive;
+}
+.midbox1
+{
+    border:1px solid #ad4040;
+    border-radius: 5px;
+    text-align: center;
+    width:fit-content;
+    padding: 0px 10px 10px 10px;
+    margin-top: 120px;
+    margin-left: 550px;
     position: absolute;
     font-family: cursive;
 }
@@ -126,4 +147,11 @@ color:#ad4040;
     margin-top:20px;
     margin-left:660px;
     
+}
+.myacc
+{
+    position: absolute;
+    
+    top:20px;
+    left:1150px;
 }
