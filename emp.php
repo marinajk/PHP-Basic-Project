@@ -60,7 +60,7 @@ $msg="Not updated";
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-   <h3>List of Employees</h3>
+   <h3 class="list">List of Employees</h3>
    <br>
    <br>
    

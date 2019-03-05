@@ -35,11 +35,11 @@ if(filter_has_var(INPUT_POST,'submit'))
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             if($count==1)
             {
-              
-
+    
                $filled=$row['filled'];
 
                $_SESSION['filled'] = $filled;
+             
                if($filled==NULL)
                 {
                         header("Location:details.php");

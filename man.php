@@ -62,7 +62,7 @@ $msg="Not updated";
 </head>
 <body>
 
-<h3>List of Managers</h3>
+<h3 class="list">List of Managers</h3>
 <br>
 <br>
 

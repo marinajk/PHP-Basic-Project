@@ -12,6 +12,7 @@ $count = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     if($count==1)
     {
+        $_SESSION['uid']=$row['uid'];
         $_SESSION['usertype']=$row['ut'];
         $_SESSION['firstname']=$row['fn'];
         $_SESSION['lastname']=$row['ln'];

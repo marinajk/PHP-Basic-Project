@@ -31,6 +31,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
+<a href="assign.php"><input type="button" name="assign" value="Assign" class="sub addd assign"></a>
 <a href="login.php"><input type="submit" name="submit" class="sub login " value="Logout" ></a>
 <a href="emp.php"><input type="button" name="emp" class="sub emp" value="Employees" ></a>
 <a href="man.php"><input type="button" name="man" class="sub man" value="Managers" ></a>

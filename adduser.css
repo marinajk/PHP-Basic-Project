@@ -21,7 +21,7 @@ a{
     width:fit-content;
     padding: 0px 10px 10px 10px;
     margin-top: 100px;
-    margin-left: 575px;
+    margin-left: 550px;
     position: absolute;
     font-family: cursive;
 }
@@ -53,7 +53,9 @@ a{
     font-family: cursive;
     padding-left: 10px;
 }
-
+.me{
+    color: #ad4040;
+}
 h1{
     color:#ad4040;
 }
