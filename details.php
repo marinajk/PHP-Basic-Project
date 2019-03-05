@@ -58,7 +58,7 @@ if(filter_has_var(INPUT_POST,'submit'))
 
                     
                     $utype=$_SESSION['usertype'];
-                    $msg="Account Details Updated".$utype;
+                    $msg=$utype."Account Details Updated";
                    
                     
                     $_SESSION['firstname'] = $first;

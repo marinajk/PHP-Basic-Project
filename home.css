@@ -25,11 +25,27 @@ a{
     position: absolute;
     font-family: cursive;
 }
+.table1{
+    margin-top:350px;
+    margin-left:500px;
+}
 h1{
     color:#ad4040;
 }
 
-
+.alert
+{
+    background-color: rgb(207, 28, 28);
+    border-radius: 5px;
+    color:white;
+    position: absolute;
+    font-family: cursive;
+    padding:10px 10px 10px 10px;
+    width:fit-content;
+    text-align: center;
+    margin-left:580px;
+    margin-top:60px;
+}
 .sub
 {
     background-color: rgb(250, 137, 137);
@@ -43,7 +59,65 @@ h1{
 .addd{
     position: absolute;
     top:20px;
-    left:1100px;
+    left:1150px;
+}
+h4{
+    position: absolute;
+    margin-top:350px;
+    margin-left:660px;
+    color: #ad4040;
+
+}
+.man
+{
+    position: absolute;
+    top:20px;
+    left:1050px;
+}
+.emp
+{
+    position: absolute;
+    top:20px;
+    left:950px;
+}
+.myemp
+{
+    position: absolute;
+    top:20px;
+    left:1140px;
+    width:100px;
+}
+table,td,th{
+    border: 1px solid #ad4040;
+    border-collapse: collapse;
+        padding: 2px 5px 2px 5px;
+    color:#ad4040;
+    text-align: center-;
+    
+}
+table{
+    margin-top:30px;
+    margin-left:350px;
+}
+.update
+{
+    margin-top:130px;
+    margin-left: 540px;
+    margin-right: 15px;
+    height: 25px;
+    width:110px;
 }
 
+.delete
+{
+    height: 25px;
+    width:110px;
+}
+h3{
+position: absolute;
+color:#ad4040;
 
+    margin-top:20px;
+    margin-left:660px;
+    
+}

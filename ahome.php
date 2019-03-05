@@ -5,7 +5,7 @@ session_start();
 
 $email=$_SESSION['emailid'];
 $pass=$_SESSION['password'];
-
+$msg='';
 $query="select * from Registration where id='$email' and pwd='$pass'";
 $result=mysqli_query($conn, $query);
 
@@ -32,7 +32,8 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 </head>
 <body>
 <a href="login.php"><input type="submit" name="submit" class="sub login " value="Logout" ></a>
-
+<a href="emp.php"><input type="button" name="emp" class="sub emp" value="Employees" ></a>
+<a href="man.php"><input type="button" name="man" class="sub man" value="Managers" ></a>
 <a href="adduser.php"><input type="button" name="adduser" value="Add User" class="sub addd"></a>
 <div class="midbox">
    <h1>
@@ -45,5 +46,37 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     <br></h1>
     </div>
 </div>
+<br>
+<h4>List of Admins</h4>
+<br>
+<br>
+<table class="table1">
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mobile Number</th>
+    <th>Email ID</th>
+    </tr>
+   <?php
+   
+$query="select fn,ln,mobno,id from registration where ut='Admin'";
+$result=mysqli_query($conn, $query);
+
+
+if($result-> num_rows>0)
+{
+    while($row = $result-> fetch_assoc())
+    {
+        echo "<tr><td>".$row['fn']."</td><td>".$row['ln']."</td><td>".$row['mobno']."</td><td>".$row['id']."</td></tr>";
+
+    }
+echo "</table>";
+}
+else{
+    $msg="No admin";
+}?>
+<?php if($msg!=''): ?>
+<div class="alert"> <?php echo $msg;?> </div><?php endif; ?>
+    
 </body>
 </html>
